@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <title>擴充設定</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, datalist {
+      margin-top: 8px;
+      padding: 6px;
+      width: 300px;
+    }
+    button {
+      margin-top: 12px;
+      padding: 6px 12px;
+    }
+    #status {
+      margin-top: 10px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h2>擴充功能設定</h2>
+
+  <label for="root-input">預設下載根目錄：</label><br />
+  <input list="root-options" type="text" id="root-input" placeholder="例如：ShopeeImages" />
+  <datalist id="root-options">
+    <option value="ShopeeImages" />
+    <option value="Backup2024" />
+    <option value="Gallery" />
+    <option value="MyProducts" />
+  </datalist>
+  
+  <br />
+  <button id="save-btn">💾 儲存設定</button>
+  <p id="status"></p>
+
+  <script src="options.js"></script>
+</body>
+</html>

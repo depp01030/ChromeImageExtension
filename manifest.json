@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Image Toolbox",
+  "version": "1.0",
+  "description": "解除右鍵限制並注入浮動面板 UI",
+  "permissions": ["scripting", "storage", "downloads", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+
+  "action": {
+    "default_title": "圖片工具箱",
+    "default_icon": "assets/icon.png"
+  },
+
+  "background": {
+    "service_worker": "background/download-handler.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/inject-entry.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "content/floating-panel/index.js",
+        "content/floating-panel/panel-template.js",
+      "content/floating-panel/panel-ui-events.js",
+        "content/floating-panel/panel-events.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "icons": {
+    "48": "assets/icon.png"
+  },
+
+  "options_page": "options/options.html"
+}
