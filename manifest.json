@@ -28,7 +28,8 @@
       "resources": [
         "content/floating-panel/index.js",
         "content/floating-panel/panel-template.js",
-      "content/floating-panel/panel-ui-events.js",
+        "content/floating-panel/panel-ui-events.js",
+        "content/floating-panel/text-parsing.js",
         "content/floating-panel/panel-events.js"
       ],
       "matches": ["<all_urls>"]

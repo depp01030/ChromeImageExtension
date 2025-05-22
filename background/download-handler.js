@@ -1,3 +1,4 @@
+// background/download-handler.js
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === "download" && message.url) {
     chrome.downloads.download(
